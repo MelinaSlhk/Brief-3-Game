@@ -1,7 +1,8 @@
-class Hero {
+export class Hero {
     private name:string;
     private power:number;
     private life:number;
+    Weapon! : Weapon;
 
     constructor(_name:string, _power:number, _life:number) {
         this.name = _name;
@@ -10,33 +11,33 @@ class Hero {
     }
 
     attack(opponent:Hero){
-        opponent._life -= this.power;   
+        opponent.life -= this.power;   
     }
     
     isAlive(){
        return this.life > 0;
     }
 
-    get _name(): string {
+    getName(): string {
         return this.name
     }
     
-    set _name(nouveauNom : string) {
+    setName(nouveauNom : string) {
         this.name = nouveauNom;
     }
     
-    get _power(): number {
+    getPower(): number {
         return this.power
     }
     
-    set _power(nouveauPower : string) {
+    setPower(nouveauPower : string) {
         this.name = nouveauPower;
     }
     
-    get _life(): number {
+    getLife(): number {
         return this.life
     }
-    set _life(nouvelleLife : number) {
+    setLife(nouvelleLife : number) {
         this.life = nouvelleLife;
     }
 }
@@ -47,3 +48,10 @@ let johnsson:Hero = new Hero("johnsson", 19, 200)
 
 hercule.attack(johnsson)
 johnsson.attack(hercule)
+
+export class Weapon {
+    name: string;
+    constructor(_name:string) {
+        this.name = _name;
+}
+}
