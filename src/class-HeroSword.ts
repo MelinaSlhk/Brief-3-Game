@@ -1,6 +1,6 @@
 import { HeroSpear } from "./class-HeroSpear";
 import { Hero } from "./index";
-import { Weapon } from "./index";
+import { Weapon } from "./class-Weapon";
 
 export class HeroSword extends Hero {
     static life(life: any) {
@@ -8,7 +8,7 @@ export class HeroSword extends Hero {
     }
         constructor(_name:string, _power:number, _life:number) {
         super(_name, _life, _power);
-this.Weapon = new Weapon("Sword");
+this.Weapon = new Weapon("Sword",50);
     }
 
     attack(opponent: Hero): void {
