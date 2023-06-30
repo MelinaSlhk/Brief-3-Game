@@ -3,17 +3,14 @@ class Hero {
     private power:number;
     private life:number;
 
-    constructor(name:string, power:number, life:number) {
-      
-        this.name = name;
-        this.power = power;
-
-        this.life = life;
-
+    constructor(_name:string, _power:number, _life:number) {
+        this.name = _name;
+        this.power = _power;
+        this.life = _life;
     }
 
     attack(opponent:Hero){
-        opponent.life -= this.power;   
+        opponent._life -= this.power;   
     }
     
     isAlive(){
